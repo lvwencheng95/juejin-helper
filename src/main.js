@@ -30,6 +30,10 @@ ${growth.checkedIn ? `签到 +${growth.incrPoint} 矿石` : '今日已签到'}
 }
 
 const main = async () => {
+  // 生成 5~20 秒随机延迟（含5和20）
+  const delaySeconds = Math.floor(Math.random() * 16) + 5;
+  await new Promise(resolve => setTimeout(resolve, delaySeconds * 1000));
+  
   const juejin = new Juejin()
 
   // 登录
