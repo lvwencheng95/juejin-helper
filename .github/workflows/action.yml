@@ -2,7 +2,7 @@ name: Growth
 
 on:
   schedule:
-    # UTC 时间 0 点运行一次
+    # UTC 时间 0 点运行一次, UTC为世界协调时，北京时间 = UTC + 8; 北京时间 17：27执行一次
     - cron: '27 9 * * *'
   workflow_dispatch:
 
